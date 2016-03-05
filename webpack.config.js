@@ -13,6 +13,10 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.less$/,
+                loader: "style!css!less"
+            },
+            {
                 test: /.jsx?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
@@ -35,7 +39,7 @@ module.exports = {
     },
     resolve: {
         // you can now require('file') instead of require('file.coffee')
-        extensions: ['', '.js', '.json', '.coffee']
+        extensions: ['', '.js', '.json', '.coffee', '.jsx']
     }
 };
 
